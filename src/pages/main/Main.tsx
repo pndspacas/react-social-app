@@ -25,7 +25,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
+    <div className="allPosts">
       {postsList?.map((post) => (
         <Post post={post} />
       ))}

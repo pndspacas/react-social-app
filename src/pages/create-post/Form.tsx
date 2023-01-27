@@ -33,13 +33,14 @@ const Form = () => {
       username: user?.displayName,
       userId: user?.uid,
     });
-    navigate("/");
+    navigate("/posts");
   };
 
   return (
     <div>
       {user && (
         <form onSubmit={handleSubmit(onCreatePost)}>
+          <h2>Create a new post !</h2>
           <input placeholder="Title..." {...register("title")} />
           <p style={{ color: "red" }}>{errors.title?.message}</p>
           <textarea placeholder="Description..." {...register("description")} />
